@@ -2,7 +2,10 @@ import React from 'react'
 
 const Welcome = () => {
   return (
-    <div className='text-white'>Instruction</div>
+    <main className='w-full h-screen relative'>
+      <div className='text-white'>Instruction</div>
+
+    </main>
   )
 }
 
