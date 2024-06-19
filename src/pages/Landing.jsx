@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 const Landing = () => {
 
   return (
-    <main className='w-full h-screen relative bg-center bg-cover' style={{ backgroundImage: `url(${Cave})`, backgroundRepeat: 'no-repeat'}}>
-      <section className='flex justify-center py-48 text-white'>
+    <main className='w-full h-screen relative bg-center bg-cover overflow-hidden' style={{ backgroundImage: `url(${Cave})`, backgroundRepeat: 'no-repeat'}}>
+      <section className='flex justify-center py-48 text-white animate-slideUp'>
         <div className='flex flex-col items-center italic'>
           <h1 className='text-cyan-400 text-8xl'>Amensia</h1>
           <h1 className='pb-16 text-6xl'>Escape Room</h1>
