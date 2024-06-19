@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '2' : '10px',
+      },
+      animation: {
+        type: 'type 4s steps(60, end)'
+      },
+      keyframes: {
+        type: {
+          from: {width: '0'},
+          to: {width: '10em'},
+        },
+      }
+    },
   },
   plugins: [],
 }
