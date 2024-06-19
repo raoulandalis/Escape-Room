@@ -10,7 +10,7 @@ export default {
         '2' : '10px',
       },
       animation: {
-        type: 'type 3s steps(36, end)'
+        type: 'type 2.5s steps(36, end)'
       },
       keyframes: {
         type: {
