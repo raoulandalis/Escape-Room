@@ -8,6 +8,7 @@ export default {
     extend: {
       spacing: {
         '2' : '10px',
+        '128': '36rem'
       },
       animation: {
         type: 'type 2.5s steps(36, end)',
