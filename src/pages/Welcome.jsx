@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Hero from '../assets/escape-main-tp.png';
 import WelcomeBackground from '../assets/welcome-full-bg.png';
+import BlankNote from '../assets/note-blank.png'
 
 const Welcome = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,7 +20,7 @@ const Welcome = () => {
 
   return (
     <main className='w-full min-h-screen relative' style={{ backgroundImage: `url(${WelcomeBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <section className='min-h-screen flex items-center justify-center pl-96 pr-20 border'>
+      <section className='min-h-screen flex items-center justify-center pl-96 pr-20'>
         <div key={currentSlide} className='flex relative text-white text-center ml-10 mb-64 px-10 py-10'>
           <div key={currentSlide} className='flex text-4xl whitespace-nowrap overflow-hidden animate-type gap-4'>
             {slides[currentSlide]}
@@ -28,6 +28,11 @@ const Welcome = () => {
           </div>
         </div>
       </section>
+      {currentSlide === slides.length - 1 ?
+      (<img src={BlankNote} className='absolute bottom-0 right-0 mb-10 mr-80 h-32 cursor-pointer'></img>) : (
+        null
+      )
+      }
     </main>
   );
 };

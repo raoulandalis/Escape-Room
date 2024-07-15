@@ -17,7 +17,7 @@ export default {
       keyframes: {
         type: {
           from: {width: '0'},
-          to: {width: '10em'},
+          to: {width: '100%'},
         },
         slideUp: {
           '0%': {transform: 'translateY(100%)', opacity: '0'},
