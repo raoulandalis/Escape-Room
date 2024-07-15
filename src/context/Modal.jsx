@@ -38,15 +38,13 @@ export function ModalProvider({ children }) {
 
 export function Modal() {
     const { modalRef, modalContent, closeModal } = useContext(ModalContext);
-    // If there is no div referenced by the modalRef or modalContent is not a
-    // truthy value, render nothing:
+
     if (!modalRef || !modalRef.current || !modalContent) return null;
 
-    // Render the following component to the div referenced by the modalRef
     return ReactDOM.createPortal(
-        <div className='fixed top-0 right-0 left-0 bottom-0 flex justify-center content-center'>
-            <div className='fixed top-0 right-0 left-0 bottom-0 bg-black-400' onClick={closeModal} />
-            <div className='absolute bg-white'>
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+            <div className="fixed top-0 left-0 w-full h-full bg-black opacity-50" onClick={closeModal}></div>
+            <div className="relative bg-transparent p-8 rounded shadow-lg z-50">
                 {modalContent}
             </div>
         </div>,
